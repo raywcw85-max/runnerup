@@ -20,8 +20,10 @@
     android:id="@+id/start_tab1_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorStartBackground"
     android:orientation="vertical"
-    tools:context=".view.StartFragment">
+    tools:context=".view.StartFragment"
+    tools:ignore="Overdraw">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/start_actionbar"
@@ -54,12 +56,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:minWidth="48dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            app:tabIndicatorColor="@color/colorStartAccent"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/colorStartTextPrimary"
+            app:tabTextColor="@color/colorStartTextSecondary" />
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/start_tabs">
+            android:layout_below="@id/start_tabs"
+            android:theme="@style/StartScreen.TitleSpinner">
 
             <include layout="@layout/start_basic" />
 
@@ -74,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:animateLayoutChanges="true"
-            android:background="#424242"
+            android:background="@color/colorStartStatusBg"
             android:clickable="true"
             android:focusable="true"
             android:orientation="vertical"

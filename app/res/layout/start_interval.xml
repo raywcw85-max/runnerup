@@ -20,15 +20,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:paddingLeft="@dimen/activity_margin"
-    android:paddingTop="@dimen/activity_margin"
-    android:paddingRight="@dimen/activity_margin"
     android:paddingBottom="@dimen/margin_for_fab"> <!--todo test if it scrolls on smaller screens-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/activity_margin"
+        android:background="@drawable/bg_start_card"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_margin">
 
         <org.runnerup.widget.TitleSpinner
             android:id="@+id/interval_audio_cue_spinner"
@@ -113,28 +113,32 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="@color/colorStartTextPrimary"
                 android:checked="true"
                 android:enabled="false"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/warm_up" />
+                android:text="@string/warm_up"
+                android:textColor="@color/colorStartTextPrimary" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:buttonTint="@color/colorStartTextPrimary"
                 android:checked="true"
                 android:enabled="false"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/cool_down" />
+                android:text="@string/cool_down"
+                android:textColor="@color/colorStartTextPrimary" />
         </LinearLayout>
     </LinearLayout>
 

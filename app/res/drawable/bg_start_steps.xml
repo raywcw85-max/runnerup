@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RunnerUp 2.0 Phase 1B: dark rounded panel for the advanced workout step editor -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorStartStatusBg" />
+    <corners android:radius="12dp" />
+</shape>
