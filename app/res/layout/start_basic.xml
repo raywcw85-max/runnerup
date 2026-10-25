@@ -19,6 +19,8 @@
     android:id="@+id/start_basic_tab"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_margin"
+    android:background="@drawable/bg_start_card"
     android:orientation="vertical"
     android:padding="@dimen/activity_margin">
 
@@ -28,6 +30,7 @@
         android:layout_height="wrap_content"
         android:key="@string/pref_basic_audio"
         android:text="@string/Audio_cue_settings"
+        android:theme="@style/StartScreen.TitleSpinner"
         runnerup:type="spinner_txt" />
 
     <org.runnerup.widget.TitleSpinner
@@ -38,6 +41,7 @@
         android:key="@string/pref_basic_target_type"
         android:prompt="@string/Type"
         android:text="@string/Target"
+        android:theme="@style/StartScreen.TitleSpinner"
         runnerup:values="@array/target_values" />
 
     <org.runnerup.widget.TitleSpinner
@@ -49,6 +53,7 @@
         android:key="@string/pref_basic_target_pace_max"
         android:prompt="@string/Type"
         android:text="@string/Target_pace_HHMMSS"
+        android:theme="@style/StartScreen.TitleSpinner"
         runnerup:type="durationpicker" />
 
     <org.runnerup.widget.TitleSpinner
@@ -58,5 +63,6 @@
         android:key="@string/pref_basic_target_hrz"
         android:prompt="@string/Type"
         android:text="@string/Target_heart_rate_zone"
+        android:theme="@style/StartScreen.TitleSpinner"
         android:visibility="gone" />
 </LinearLayout>

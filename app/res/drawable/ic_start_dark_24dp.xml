@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RunnerUp 2.0 Phase 1A: dark play icon for the neon green start FAB -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
+    <path
+        android:fillColor="#20252B"
+        android:pathData="M8,5v14l11,-7z" />
+</vector>

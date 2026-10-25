@@ -89,4 +89,13 @@
         <item name="android:textColor">@color/colorText</item>
     </style>
 
+    <!-- RunnerUp 2.0 Phase 1A: keep TitleSpinner rows readable on light cards -->
+    <style name="StartScreen.TitleSpinner" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/colorStartTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorStartTextSecondary</item>
+        <item name="android:textColor">@color/colorStartTextPrimary</item>
+        <item name="android:textColorHint">@color/colorStartTextSecondary</item>
+        <item name="android:colorAccent">@color/colorStartAccent</item>
+    </style>
+
 </resources>

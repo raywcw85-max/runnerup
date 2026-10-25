@@ -45,4 +45,12 @@
     <color name="sportRunning">#46FFBE</color>
     <color name="sportWalking">#ACBFFF</color>
     <color name="sportOther">#FFD95C</color>
+
+    <!-- RunnerUp 2.0 Phase 1A: light start screen palette -->
+    <color name="colorStartBackground">#F4F6F8</color>
+    <color name="colorStartCard">#FFFFFF</color>
+    <color name="colorStartAccent">#C6FF00</color>
+    <color name="colorStartFab">#C6FF00</color>
+    <color name="colorStartTextPrimary">#20252B</color>
+    <color name="colorStartTextSecondary">#66717B</color>
 </resources>
