@@ -54,4 +54,11 @@
     <color name="colorStartTextPrimary">#20252B</color>
     <color name="colorStartTextSecondary">#66717B</color>
     <color name="colorStartStatusBg">#20252B</color>
+
+    <!-- RunnerUp 2.0 Phase 2A: dark run dashboard -->
+    <color name="colorRunBackground">#12161C</color>
+    <color name="colorRunPanel">#1A2028</color>
+    <color name="colorRunAccent">#C6FF00</color>
+    <color name="colorRunTextPrimary">#FFFFFF</color>
+    <color name="colorRunTextSecondary">#A6B0BB</color>
 </resources>

@@ -15,10 +15,13 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/start_view"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:background="@color/colorRunBackground"
+    android:orientation="vertical"
+    tools:ignore="Overdraw">
 
     <TableLayout
         android:id="@+id/table_layout1"
@@ -32,24 +35,24 @@
             android:layout_height="wrap_content">
 
             <TextView
-                style="@style/RunHeader"
+                style="@style/RunLabel"
                 android:gravity="end"
                 android:text="@string/time" />
 
             <TextView
-                style="@style/RunHeader"
+                style="@style/RunLabel"
                 android:gravity="end"
                 android:text="@string/distance" />
 
             <TextView
                 android:id="@+id/velocity_label"
-                style="@style/RunHeader"
+                style="@style/RunLabel"
                 android:gravity="end"
                 android:text="@string/Pace" />
 
             <TextView
                 android:id="@+id/activity_header_hr"
-                style="@style/RunHeader"
+                style="@style/RunLabel"
                 android:layout_marginEnd="3dp"
                 android:gravity="end"
                 android:text="@string/metrics_heartrate" />
@@ -58,7 +61,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/countdown_background"
+            android:background="@drawable/bg_run_panel"
             android:orientation="vertical">
 
             <LinearLayout
@@ -66,7 +69,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    style="@style/RunHeader"
+                    style="@style/RunSectionLabel"
                     android:layout_marginStart="10dp"
                     android:text="@string/Total" />
             </LinearLayout>
@@ -77,19 +80,19 @@
 
                 <TextView
                     android:id="@+id/run_activity_time"
-                    style="@style/RunInfo" />
+                    style="@style/RunValuePrimary" />
 
                 <TextView
                     android:id="@+id/run_activity_distance"
-                    style="@style/RunInfo" />
+                    style="@style/RunValuePrimary" />
 
                 <TextView
                     android:id="@+id/run_activity_pace"
-                    style="@style/RunInfo" />
+                    style="@style/RunValuePrimary" />
 
                 <TextView
                     android:id="@+id/activity_hr"
-                    style="@style/RunInfo"
+                    style="@style/RunValue"
                     android:layout_marginEnd="3dp" />
             </TableRow>
         </LinearLayout>
@@ -98,7 +101,7 @@
             android:id="@+id/table_row_interval"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/countdown_background"
+            android:background="@drawable/bg_run_panel"
             android:orientation="vertical">
 
             <LinearLayout
@@ -106,7 +109,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    style="@style/RunHeader"
+                    style="@style/RunSectionLabel"
                     android:layout_marginStart="10dp"
                     android:text="@string/Interval" />
             </LinearLayout>
@@ -117,19 +120,19 @@
 
                 <TextView
                     android:id="@+id/run_interval_time"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/intervall_distance"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/interval_pace"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/interval_hr"
-                    style="@style/RunInfo"
+                    style="@style/RunValue"
                     android:layout_marginEnd="3dp" />
             </TableRow>
         </LinearLayout>
@@ -137,7 +140,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/countdown_background"
+            android:background="@drawable/bg_run_panel"
             android:orientation="vertical">
 
             <LinearLayout
@@ -145,7 +148,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    style="@style/RunHeader"
+                    style="@style/RunSectionLabel"
                     android:layout_marginStart="10dp"
                     android:text="@string/Lap" />
             </LinearLayout>
@@ -157,19 +160,19 @@
 
                 <TextView
                     android:id="@+id/lap_time"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/lap_distance"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/lap_pace"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/lap_hr"
-                    style="@style/RunInfo"
+                    style="@style/RunValue"
                     android:layout_marginEnd="3dp" />
             </TableRow>
         </LinearLayout>
@@ -178,7 +181,7 @@
             android:id="@+id/table_row_current"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/countdown_background"
+            android:background="@drawable/bg_run_panel"
             android:orientation="vertical">
 
             <LinearLayout
@@ -186,7 +189,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    style="@style/RunHeader"
+                    style="@style/RunSectionLabel"
                     android:layout_marginStart="10dp"
                     android:text="@string/Current" />
             </LinearLayout>
@@ -198,20 +201,20 @@
 
                 <TextView
                     android:id="@+id/current_time_unused"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/current_distance_unused"
-                    style="@style/RunInfo" />
+                    style="@style/RunValue" />
 
                 <TextView
                     android:id="@+id/current_pace"
-                    style="@style/RunInfo"
+                    style="@style/RunValue"
                     android:layout_marginEnd="3dp" />
 
                 <TextView
                     android:id="@+id/current_hr"
-                    style="@style/RunInfo"
+                    style="@style/RunValue"
                     android:layout_marginEnd="3dp" />
             </TableRow>
         </LinearLayout>

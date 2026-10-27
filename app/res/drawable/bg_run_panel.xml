@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RunnerUp 2.0 Phase 2A: dark rounded panel for the run dashboard -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorRunPanel" />
+    <corners android:radius="12dp" />
+</shape>
