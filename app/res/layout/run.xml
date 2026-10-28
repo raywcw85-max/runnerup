@@ -15,6 +15,7 @@
   ~  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/start_view"
     android:layout_width="fill_parent"
@@ -28,40 +29,82 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingTop="4dp">
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="6dp">
 
             <TextView
                 style="@style/RunLabel"
-                android:gravity="end"
-                android:text="@string/time" />
+                android:text="@string/time"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeMaxTextSize="13sp"
+                app:autoSizeStepGranularity="1sp" />
 
             <TextView
                 style="@style/RunLabel"
-                android:gravity="end"
-                android:text="@string/distance" />
+                android:text="@string/distance"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeMaxTextSize="13sp"
+                app:autoSizeStepGranularity="1sp" />
 
             <TextView
                 android:id="@+id/velocity_label"
                 style="@style/RunLabel"
-                android:gravity="end"
-                android:text="@string/Pace" />
+                android:text="@string/Pace"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeMaxTextSize="13sp"
+                app:autoSizeStepGranularity="1sp" />
 
             <TextView
                 android:id="@+id/activity_header_hr"
                 style="@style/RunLabel"
-                android:layout_marginEnd="3dp"
-                android:gravity="end"
-                android:text="@string/metrics_heartrate" />
+                android:text="@string/metrics_heartrate"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeMaxTextSize="13sp"
+                app:autoSizeStepGranularity="1sp" />
         </TableRow>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_run_panel"
+            android:layout_marginBottom="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -70,7 +113,8 @@
 
                 <TextView
                     style="@style/RunSectionLabel"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
                     android:text="@string/Total" />
             </LinearLayout>
 
@@ -80,20 +124,55 @@
 
                 <TextView
                     android:id="@+id/run_activity_time"
-                    style="@style/RunValuePrimary" />
+                    style="@style/RunValuePrimary"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="26sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/run_activity_distance"
-                    style="@style/RunValuePrimary" />
+                    style="@style/RunValuePrimary"
+                    android:layout_weight="1.1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="26sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/run_activity_pace"
-                    style="@style/RunValuePrimary" />
+                    style="@style/RunValuePrimary"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="26sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/activity_hr"
                     style="@style/RunValue"
-                    android:layout_marginEnd="3dp" />
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
             </TableRow>
         </LinearLayout>
 
@@ -102,6 +181,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_run_panel"
+            android:layout_marginBottom="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -110,7 +194,8 @@
 
                 <TextView
                     style="@style/RunSectionLabel"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
                     android:text="@string/Interval" />
             </LinearLayout>
 
@@ -120,20 +205,55 @@
 
                 <TextView
                     android:id="@+id/run_interval_time"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/intervall_distance"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/interval_pace"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/interval_hr"
                     style="@style/RunValue"
-                    android:layout_marginEnd="3dp" />
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
             </TableRow>
         </LinearLayout>
 
@@ -141,6 +261,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_run_panel"
+            android:layout_marginBottom="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -149,31 +274,66 @@
 
                 <TextView
                     style="@style/RunSectionLabel"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
                     android:text="@string/Lap" />
             </LinearLayout>
 
             <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/lap_time"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/lap_distance"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/lap_pace"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/lap_hr"
                     style="@style/RunValue"
-                    android:layout_marginEnd="3dp" />
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
             </TableRow>
         </LinearLayout>
 
@@ -182,6 +342,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_run_panel"
+            android:layout_marginBottom="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -190,32 +355,66 @@
 
                 <TextView
                     style="@style/RunSectionLabel"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginBottom="2dp"
                     android:text="@string/Current" />
             </LinearLayout>
 
             <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="0dp">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/current_time_unused"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/current_distance_unused"
-                    style="@style/RunValue" />
+                    style="@style/RunValue"
+                    android:layout_weight="1.1"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/current_pace"
                     style="@style/RunValue"
-                    android:layout_marginEnd="3dp" />
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
 
                 <TextView
                     android:id="@+id/current_hr"
                     style="@style/RunValue"
-                    android:layout_marginEnd="3dp" />
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="14sp"
+                    app:autoSizeMaxTextSize="24sp"
+                    app:autoSizeStepGranularity="1sp" />
             </TableRow>
         </LinearLayout>
 
@@ -243,19 +442,27 @@
             android:visibility="invisible" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/workout_list"
+    <!-- Keep the list and optional HR diagnostics inside the space above the controls. -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/countdown_layout"></ListView>
-
-    <TextView
-        android:id="@+id/hr_debug"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_above="@id/run_table_row1"
-        android:layout_below="@id/workout_list"
-        android:scrollbars="vertical" />
+        android:layout_below="@id/countdown_layout"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/workout_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/hr_debug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="96dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
 
     <TableRow
         android:id="@+id/run_table_row1"
